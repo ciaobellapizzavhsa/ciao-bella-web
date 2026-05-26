@@ -138,11 +138,15 @@ export default function App() {
             <button onClick={() => scrollTo("nosotros")} className="hover:text-primary transition-colors">Nosotros</button>
             <button onClick={() => scrollTo("contacto")} className="hover:text-primary transition-colors">Contacto</button>
           </nav>
-          <a href={hasItems ? buildOrderLink(cart) : WHATSAPP_BROWSE} target="_blank" rel="noopener noreferrer"
-            className="flex items-center gap-2 bg-primary hover:bg-primary/90 text-white px-5 py-2 rounded-full font-medium transition-all box-glow">
-            <SiWhatsapp className="w-4 h-4" />
-            <span className="hidden sm:inline">{hasItems ? `Pedir (${cartCount})` : "Pedir"}</span>
-          </a>
+          <button
+            onClick={() => scrollTo("menu")}
+            className="flex items-center gap-2 bg-primary hover:bg-primary/90 text-white px-5 py-2 rounded-full font-medium transition-all box-glow"
+        >
+          <SiWhatsapp className="w-4 h-4" />
+          <span className="hidden sm:inline">
+            {hasItems ? `Ver pedido (${cartCount})` : "Ver menú"}
+          </span>
+        </button>
         </div>
       </header>
 
@@ -443,22 +447,26 @@ export default function App() {
       </footer>
 
       {/* ─── FLOATING WHATSAPP ──────────────────────────────────── */}
-      <a href={hasItems ? buildOrderLink(cart) : WHATSAPP_BROWSE} target="_blank" rel="noopener noreferrer"
+      <button
+        onClick={() => scrollTo("menu")}
         className={`fixed bottom-6 right-6 w-16 h-16 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform z-50 hover:bg-[#20bd5a] ${hasItems ? "bottom-28 md:bottom-6" : ""}`}
-        aria-label="Contactar por WhatsApp">
+        aria-label="Ver menú"
+      >
         <SiWhatsapp className="w-8 h-8" />
+
         {hasItems && (
           <span className="absolute -top-1 -right-1 w-6 h-6 bg-primary rounded-full flex items-center justify-center text-xs font-bold text-white border-2 border-background">
             {cartCount}
           </span>
         )}
+
         {!hasItems && (
           <span className="absolute -top-1 -right-1 flex h-4 w-4">
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-60" />
             <span className="relative inline-flex rounded-full h-4 w-4 bg-[#8b1a1a]" />
           </span>
         )}
-      </a>
+      </button>
 
       {/* ─── FLOATING CART BAR ──────────────────────────────────── */}
       <AnimatePresence>
