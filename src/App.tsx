@@ -285,7 +285,7 @@ export default function App() {
           className="container mx-auto px-4 md:px-8 text-center relative z-10"
         >
           <motion.div variants={fadeIn} className="inline-block mb-6 px-4 py-1.5 rounded-full border border-primary/30 bg-primary/10 text-primary text-xs font-bold tracking-widest uppercase">
-            Jueves a Sábado · 5 PM – 11 PM
+            Viernes y Sábados · 5 PM – 11 PM
           </motion.div>
 
           <motion.h2 variants={fadeIn} className="text-5xl md:text-6xl font-serif font-bold text-white mb-6 leading-tight">
@@ -431,7 +431,7 @@ export default function App() {
               <div className="bg-card border border-border p-6 rounded-2xl">
                 <div className="flex items-center gap-3 text-primary font-medium mb-2">
                   <Clock className="w-5 h-5" />
-                  Jueves a Sábado
+                  Viernes y Sábados
                 </div>
                 <div className="text-white text-lg">5:00 PM a 11:00 PM</div>
               </div>
