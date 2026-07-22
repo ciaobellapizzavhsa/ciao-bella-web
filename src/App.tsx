@@ -29,7 +29,7 @@ type ModalKind =
 
 /* ─── Constants ──────────────────────────────────────────── */
 const WA_NUMBER = "529933733885";
-const CLASICAS_INGREDIENTS = ["Pepperoni", "Jamón", "Aceitunas Negras", "Tocino", "Chorizo", "Pimientos"];
+const CLASICAS_INGREDIENTS = ["Pepperoni", "Champiñones", "Jamón", "Aceitunas Negras", "Tocino", "Chorizo", "Pimientos"];
 const CLASICA_BASE_PRICE = 135;
 const EXTRA_PRICE = 25;
 
